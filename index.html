@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charter Flight Luxury Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      margin: 0;
+    }
+   .navbar {
+  background-color: transparent;
+  color: #ffd700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffd700;
+  margin-right: auto;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 1;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.nav-links li a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  padding: 0.25rem 0.5rem;
+}
+.left-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  font-size: 0.8rem;
+  color: #ffd700;
+  font-weight: 400;
+}
+
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+    
+    .hero-content h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      color: #ffd700;
+    }
+    .hero-content p {
+      color: #e6e6e6;
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    .cta-button {
+      background: #ffd700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+
+    .services-section {
+      padding: 4rem 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+    .services-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #000034;
+    }
+    .service-cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .service-card {
+      background: #e6f0ff;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .service-card h4 {
+      font-size: 1.3rem;
+      color: #000034;
+    }
+    .service-card p {
+      color: #555;
+    }
+
+    .dual-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 4rem 2rem;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .dual-section.reverse {
+      flex-direction: row-reverse;
+    }
+    .dual-section .text,
+    .dual-section .image {
+      flex: 1;
+    }
+    .dual-section img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .dual-section h3 {
+      font-size: 2rem;
+      color: #000034;
+    }
+    .dual-section p {
+      color: #555;
+      line-height: 1.6;
+    }
+    .dual-section button {
+      background: #c00;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .contact-section {
+      padding: 4rem 2rem;
+      background-color: #f8f8f8;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 2rem;
+      color: #000034;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: 2rem auto 0;
+      gap: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .contact-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background-color: #000034;
+      color: #fff;
+      padding: 1rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #001050;
+    }
+
+    footer {
+      background: #000034;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="home" class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="4285866-hd_1280_720_30fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <nav class="navbar">
+      <div class="left-info">
+  <div class="logo">zenvora aviation  Call </div>
+  <div class="contact-info">Call us: +91 90804 95209</div>
+</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      
+      <h1>Luxury in the Skies</h1>
+      <p>Private jet charter services to elevate your journey.</p>
+      <a href="#contact" class="cta-button">Book Now</a>
+    </div>
+  </section>
+
+  <section id="contact" style="padding: 4rem 2rem; background-color: #fff; text-align: center;">
+    <h2 style="letter-spacing: 2px; color: #333; font-weight: 600; margin-bottom: 1rem;">PLAN A FLIGHT</h2>
+    <p style="color: #666; margin-bottom: 2rem;">Enter your flight details below and our team will contact you shortly. Private jet charter flight prices are subject to the market rate and start from 25,000 INR per hour.</p>
+
+    <div style="max-width: 950px; margin: 0 auto; background: #fff; border: 1px solid #ccc; border-radius: 50px; display: flex; align-items: center; padding: 1rem 2rem; gap: 1rem; flex-wrap: wrap; justify-content: space-between;">
+      <input type="text" placeholder="From" style="border: none; flex: 1; min-width: 100px; font-size: 1rem;" />
+      <input type="text" placeholder="To" style="border: none; flex: 1; min-width: 100px; font-size: 1rem;" />
+      <input type="date" style="border: none; flex: 1; min-width: 100px; font-size: 1rem;" />
+      <input type="number" min="1" value="1" style="border: none; width: 120px; font-size: 1rem;" />
+      <button style="background: #000034; color: #fff; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 1.2rem; cursor: pointer;">→</button>
+    </div>
+
+    <p style="margin-top: 1rem; font-size: 0.9rem; color: #555;">
+      Need more flights? <a href="#" style="color: #000034; text-decoration: underline;">Switch to multi-city</a>
+    </p>
+  </section>
+
+
+  <section id="services" class="services-section">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h4>Passenger Charter</h4>
+        <p>VIP, corporate, and group air charter tailored to your schedule.</p>
+      </div>
+      <div class="service-card">
+        <h4>Cargo Charter</h4>
+        <p>Heavy, urgent, or dangerous cargo delivered globally with care.</p>
+      </div>
+      <div class="service-card">
+        <h4>Emergency Evacuation</h4>
+        <p>Rapid-response aircraft for medical or crisis situations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="dual-section reverse">
+    <div class="text">
+      <h3>Be at Your Best On Board and At Destination</h3>
+      <p>Wellness is important to us all and means something different to each of us. In partnership with world-leading wellness experts, SkyJet invites you to discover new perspectives of wellness in the air and on the ground.</p>
+      <button>Discover Wellness</button>
+    </div>
+    <div class="image">
+      <img src="20250628_1933_Luxury Sky Wellness_simple_compose_01jyvdfc30e0a895p5mjhwrmdm.png" alt="Wellness on Board">
+    </div>
+  </section>
+
+  <section class="dual-section">
+    <div class="text">
+      <h3>Private Dining</h3>
+      <p>Dine at 25,000 feet. Explore the luxury of curated onboard meals for any occasion, with taste and experience at the forefront of every SkyJet flight.</p>
+      <button>Learn More</button>
+    </div>
+    <div class="image">
+      <img src="20250628_1902_Jet Private Dining_simple_compose_01jyvbqcehf7e80bpfdzv9ms1h.png" alt="Private Dining">
+    </div>
+  </section>
+
+  <section id="about" class="dual-section reverse">
+  <div class="text">
+    <h3>About Zenvora Aviation</h3>
+    <p>
+      Zenvora Aviation is your trusted private jet brokerage partner—redefining luxury air travel through seamless elegance, discretion, and deeply personalized service.
+    </p>
+    <p>
+      We specialize in curating bespoke flight experiences for elite travelers, corporate executives, and VIPs around the world. Our commitment goes far beyond arranging private jet charters—we deliver a complete, door-to-door luxury journey.
+    </p>
+    <p>
+      From chauffeured ground transfers and VIP terminal access to exquisite five-star in-flight dining, every detail is managed with precision and care. Our global network of aircraft and concierge professionals ensures your flight is smooth, secure, and truly unforgettable.
+    </p>
+    <p>
+      Choose Zenvora Aviation—where every mile is a masterpiece.
+    </p>
+    <button>Explore Our Fleet</button>
+  </div>
+  <div class="image">
+    <img src="istockphoto-1437300969-612x612.jpg" alt="Zenvora Luxury Jet Service" />
+  </div>
+</section>
+
+
+<section id="contact" class="contact-section">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mnqkrkny" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message or Flight Request" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Zenvora Aviation. All rights reserved.</p>
+  </footer>
+
+ 
+
+
+
+</body>
+</html>
